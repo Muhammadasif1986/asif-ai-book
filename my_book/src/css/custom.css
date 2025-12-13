@@ -1,30 +1,157 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
-/* You can override the default Infima variables here. */
+/* Custom CSS for Asif AI Book documentation */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1a47c4;
+  --ifm-color-primary-darkest: #153a9e;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Custom AI book colors */
+  --ai-book-accent: #8b5cf6;
+  --ai-book-background: #f8fafc;
+  --ai-book-text: #1e293b;
+  --ai-book-border: #e2e8f0;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode customizations */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Dark mode AI book colors */
+  --ai-book-background: #0f172a;
+  --ai-book-text: #f1f5f9;
+  --ai-book-border: #334155;
+}
+
+/* Custom hero section styling */
+.hero--primary {
+  background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+  color: white;
+}
+
+.hero--primary h1 {
+  color: white;
+}
+
+.hero--primary p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Custom card styling for documentation sections */
+.card {
+  border: 1px solid var(--ai-book-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Custom code block styling */
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Custom admonitions for AI-specific content */
+.admonition.ai-note {
+  border-left-color: var(--ai-book-accent);
+}
+
+.admonition.ai-note .admonition-icon {
+  color: var(--ai-book-accent);
+}
+
+/* Improved table styling */
+.table-wrapper {
+  overflow: auto;
+}
+
+.markdown table {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.markdown table th,
+.markdown table td {
+  padding: 0.75rem;
+  border: 1px solid var(--ai-book-border);
+}
+
+/* Footer customization */
+.footer {
+  background-color: var(--ai-book-background);
+  color: var(--ai-book-text);
+}
+
+/* Sidebar customization */
+.menu {
+  font-size: 0.9rem;
+}
+
+/* Navigation customization */
+.navbar {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Custom button styling */
+.button {
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Custom typography */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-weight: 600;
+}
+
+/* Custom container for AI-specific content */
+.ai-content {
+  background-color: rgba(139, 92, 246, 0.05);
+  border-left: 4px solid var(--ai-book-accent);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+[data-theme='dark'] .ai-content {
+  background-color: rgba(139, 92, 246, 0.1);
 }
