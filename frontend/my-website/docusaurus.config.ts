@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Asif AI Book',
-  tagline: 'Comprehensive Guide to AI Development',
+  title: 'Physical AI & Humanoid Robotics Textbook',
+  tagline: 'Bridging the Digital Brain and the Physical World',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,18 +15,18 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://asif-ai-book.github.io',
+  url: 'https://Muhammadasif1986.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/asif-ai-book/',
+  baseUrl: '/ai-diven-book/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'asif-ai-book', // Usually your GitHub org/user name.
-  projectName: 'asif-ai-book', // Usually your repo name.
+  organizationName: 'Muhammadasif1986', // Usually your GitHub org/user name.
+  projectName: 'ai-diven-book', // Usually your repo name.
+  deploymentBranch:"feat/initial-setup",
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -45,7 +45,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/asif-ai-book/asif-ai-book/edit/main/my_book/',
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -56,7 +56,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/asif-ai-book/asif-ai-book/edit/main/my_book/',
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -69,6 +69,32 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    // [
+    //   'docusaurus-pdf',
+    //   {
+    //     // Options for the docusaurus-pdf plugin
+    //     debug: false, // Set to true for debugging
+    //     paperSize: 'A4', // Or other sizes like 'letter', 'legal', etc.
+    //     printBackground: true,
+    //     // Include all docs in the PDF
+    //     docs: {
+    //       path: './docs',
+    //       // Optionally specify specific doc IDs to include
+    //       // ids: ['module1-ros2/introduction', 'module2-gazebo/simulation', ...],
+    //     },
+    //     // Optionally specify blog path if you want to include blogs
+    //     // blog: {
+    //     //   path: './blog',
+    //     // },
+    //     // Output directory (relative to build directory)
+    //     outputDir: 'pdf',
+    //     // Output filename
+    //     outputFile: 'physical-ai-humanoid-robotics-textbook.pdf',
+    //   }
+    // ]
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -76,9 +102,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Asif AI Book',
+      title: 'Physical AI & Humanoid Robotics Textbook',
       logo: {
-        alt: 'Asif AI Book Logo',
+        alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -86,11 +112,11 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Docs',
+          label: 'Tutorial',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/asif-ai-book/asif-ai-book',
+          href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
           position: 'right',
         },
@@ -103,16 +129,8 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Introduction',
+              label: 'Tutorial',
               to: '/docs/intro',
-            },
-            {
-              label: 'Tutorial Basics',
-              to: '/docs/tutorial-basics/create-a-document',
-            },
-            {
-              label: 'API Documentation',
-              to: '/docs/api/introduction',
             },
           ],
         },
@@ -121,15 +139,15 @@ const config: Config = {
           items: [
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/ai',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/ai-community',
+              href: 'https://discordapp.com/invite/docusaurus',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/asif_ai_book',
+              label: 'X',
+              href: 'https://x.com/docusaurus',
             },
           ],
         },
@@ -142,17 +160,16 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/asif-ai-book/asif-ai-book',
+              href: 'https://github.com/facebook/docusaurus',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Asif AI Book. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Muhammad Asif. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['python', 'json', 'bash', 'typescript', 'yaml'],
     },
   } satisfies Preset.ThemeConfig,
 };
