@@ -31,7 +31,13 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+### Compliance Verification
+- **User-Centric Design**: Verify feature addresses real user needs and provides clear value
+- **Minimal Viable Implementation**: Confirm solution is simplest possible that delivers value
+- **Test-First Development**: Ensure comprehensive unit tests will be written before implementation
+- **Continuous Integration & Deployment**: Verify CI/CD pipeline requirements are identified
+- **Documentation-Driven Development**: Confirm documentation requirements are planned
+- **Security-First Approach**: Validate security considerations are addressed from design phase
 
 ## Project Structure
 

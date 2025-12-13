@@ -84,16 +84,22 @@
 
 ### Functional Requirements
 
-- **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
-- **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
-- **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
-- **FR-005**: System MUST [behavior, e.g., "log all security events"]
+- **FR-001**: System MUST address real user needs and provide clear value (User-Centric Design)
+- **FR-002**: System MUST implement the simplest solution that delivers value (Minimal Viable Implementation)
+- **FR-003**: System MUST be testable with comprehensive unit tests (Test-First Development)
+- **FR-004**: System MUST support continuous integration and deployment (CI/CD)
+- **FR-005**: System MUST include proper documentation for all public interfaces (Documentation-Driven Development)
+- **FR-006**: System MUST incorporate security considerations from initial design (Security-First Approach)
+- **FR-007**: System MUST [specific capability, e.g., "allow users to create accounts"]
+- **FR-008**: System MUST [specific capability, e.g., "validate email addresses"]
+- **FR-009**: Users MUST be able to [key interaction, e.g., "reset their password"]
+- **FR-010**: System MUST [data requirement, e.g., "persist user preferences"]
+- **FR-011**: System MUST [behavior, e.g., "log all security events"]
 
 *Example of marking unclear requirements:*
 
-- **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
-- **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
+- **FR-012**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
+- **FR-013**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
 ### Key Entities *(include if feature involves data)*
 

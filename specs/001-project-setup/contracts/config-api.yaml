@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Project Configuration API
+  description: API for managing project configurations and templates
+  version: 1.0.0
+
+paths:
+  /templates:
+    get:
+      summary: List available project templates
+      responses:
+        '200':
+          description: List of available templates
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Template'
+
+  /generate:
+    post:
+      summary: Generate a new project from a template
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerationRequest'
+      responses:
+        '200':
+          description: Project generated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerationResponse'
+
+components:
+  schemas:
+    Template:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the template
+        name:
+          type: string
+          description: Display name of the template
+        description:
+          type: string
+          description: Brief description of the template
+        version:
+          type: string
+          description: Template version
+
+    GenerationRequest:
+      type: object
+      required:
+        - template_id
+        - project_name
+        - parameters
+      properties:
+        template_id:
+          type: string
+          description: ID of the template to use
+        project_name:
+          type: string
+          description: Name for the new project
+        parameters:
+          type: object
+          description: Template-specific parameters
+
+    GenerationResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Generation status
+        project_path:
+          type: string
+          description: Path where the project was created
+        message:
+          type: string
+          description: Additional information about the generation

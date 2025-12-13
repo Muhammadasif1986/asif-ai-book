@@ -68,6 +68,11 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] T007 Create base models/entities that all stories depend on
 - [ ] T008 Configure error handling and logging infrastructure
 - [ ] T009 Setup environment configuration management
+- [ ] T010 [P] Configure testing framework with 80% coverage requirement
+- [ ] T011 [P] Setup CI/CD pipeline with automated testing
+- [ ] T012 [P] Configure documentation generation tools
+- [ ] T013 [P] Implement security scanning in CI pipeline
+- [ ] T014 [P] Setup code quality checks (linting, complexity analysis)
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -156,6 +161,10 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
 - [ ] TXXX Security hardening
 - [ ] TXXX Run quickstart.md validation
+- [ ] TXXX Verify compliance with all constitution principles
+- [ ] TXXX Run security audit and vulnerability assessment
+- [ ] TXXX Validate documentation completeness for all public interfaces
+- [ ] TXXX Confirm 80%+ code coverage requirement met
 
 ---
 

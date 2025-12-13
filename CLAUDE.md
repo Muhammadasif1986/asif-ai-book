@@ -208,3 +208,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- Python 3.11+ for project generation scripts, Shell/Bash for setup automation + Cookiecutter, Jinja2 templates, standard Python libraries (001-project-setup)
+- File-based project templates stored in template directories (001-project-setup)
+
+## Recent Changes
+- 001-project-setup: Added Python 3.11+ for project generation scripts, Shell/Bash for setup automation + Cookiecutter, Jinja2 templates, standard Python libraries
