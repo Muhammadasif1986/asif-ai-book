@@ -65,6 +65,17 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
     },
     {
+      type: 'category',
+      label: 'Book Content',
+      items: [
+        'module1-ros2/index',
+        'module2-digital-twin/index',
+        'module3-ai-robot-brain/index',
+        'module4-vla/index',
+      ],
+      collapsed: false,
+    },
+    {
       type: 'doc',
       id: 'contributing',
       label: 'Contributing',
