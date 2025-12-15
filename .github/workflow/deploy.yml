@@ -1,0 +1,57 @@
+.name: Build and Update Docs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build Docusaurus and Update Docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: my-website/package-lock.json
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        id: node-modules-cache
+        with:
+          path: my-website/node_modules
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('my-website/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+
+      - name: Install dependencies
+        if: steps.node-modules-cache.outputs.cache-hit != 'true'
+        working-directory: my-website
+        run: npm ci
+
+      - name: Build website
+        working-directory: my-website
+        run: npm run build
+
+      - name: Copy build to docs
+        run: |
+          rm -rf docs/*
+          cp -r my-website/build/. docs/
+          touch docs/.nojekyll
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update built site [skip ci]"
+            git push
+          fi
